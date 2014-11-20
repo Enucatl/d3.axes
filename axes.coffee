@@ -1,8 +1,10 @@
 class d3.chart.Axes extends d3.chart.BaseChart
 
     _draw: (element, data, i) ->
-        # element should be the big group already translated with the
-        # right margins and so on
+        #
+        # element should be the big group inside the svg already translated
+        # with the margins to avoid code duplication
+        #
         # convenience accessors
         x_scale = @x_scale()
         y_scale = @y_scale()
@@ -15,7 +17,7 @@ class d3.chart.Axes extends d3.chart.BaseChart
             .scale y_scale
             .orient "left"
 
-        element
+        d3.select element
             .selectAll ".y.axis"
             .data [data]
             .enter()
@@ -23,7 +25,7 @@ class d3.chart.Axes extends d3.chart.BaseChart
             .classed "y axis", true
             .call y_axis
 
-        element
+        d3.select element
             .selectAll ".x.axis"
             .data [data]
             .enter()
