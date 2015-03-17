@@ -8,6 +8,9 @@ exists already!
 Example
 -------
 
+A d3.line plot [with axes](http://enucatl.github.io/pilatus-experiments/2015/03/11/visibility.html)
+and [source code](https://github.com/Enucatl/pilatus-experiments/blob/gh-pages/js/visibility.coffee#L25)
+
 Add axes to a bar chart:
 
 ```coffeescript
